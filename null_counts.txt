@@ -1,0 +1,23 @@
+{
+   "account_conversions": [["SignupSource",10],["Country",12762],["StateOrProvice",12762],["City",12762],["Address1",12762],["Address2",12762]],
+   "account_net_gain": [],
+   "bucket_utilization": [],
+   "daily_ledger": [],
+   "daily_ledger_legacy": [],
+   "daily_storage_history": [],
+   "daily_storage_increase": [],
+   "est_daily_deletes": [],
+   "eu_user_stats": [["BillingCountry",818015],["CurrentBillingPlan",616]],
+   "expiring_accounts": [],
+   "invoices_generated": [],
+   "outstanding_invoices": [["LastPaymentFailureResponse",232890]],
+   "partner_kpi": [],
+   "partner_kpi_legacy": [],
+   "purged_accounts": [],
+   "signups": [],
+   "territory_storage": [["Territory",295]],
+   "user_activity": [],
+   "user_stats": [["SignupSource",35041],["WeeklyCohort",35041],["BillingCountry",4532446],["BillingState",4688982],["CurrentBillingPlan",600],["DaysToConvert",9099294],["AccountStanding",600],["CurrentPlanStarted",600],["CurrentPlanEnds",7433317]],
+   "vault_storage": [],
+   "wasabi_client_stats": []
+}

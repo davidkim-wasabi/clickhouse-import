@@ -1,0 +1,14 @@
+CREATE TABLE billing_reports.{}
+(
+  `PartnerId` String,
+  `Date` DateTime,
+  `TotalSubAccounts` UInt64,
+  `CurrentActiveSubAccounts` UInt64,
+  `CurrentActiveTrialSubAccounts` UInt64,
+  `CurrentActivePaidSubAccounts` UInt64,
+  `TotalStorageGBDays` Float64,
+  `TotalRecognizedStorageRevenue` Decimal(15,2),
+  `CurrentActiveTiB` Float64
+)
+ENGINE = ReplacingMergeTree
+ORDER BY (PartnerId, Date)

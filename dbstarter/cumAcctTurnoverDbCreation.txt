@@ -1,0 +1,15 @@
+CREATE TABLE billing_reports.{}
+(
+  `AcctNum` UInt64,
+  `AcctName` Nullable(String),
+  `InviteSource` String,
+  `ConvertedOn` DateTime,
+  `DeleteTime` DateTime,
+  `NumDaysAsPayingCustomer` UInt64,
+  `DeleteReason` String,
+  `LastActiveStorageUtilizationGB` Float64,
+  `AmountInvoiced` Decimal(15,2),
+  `AmountCollected` Decimal(15,2)
+)
+ENGINE = ReplacingMergeTree
+ORDER BY (AcctNum, DeleteTime)

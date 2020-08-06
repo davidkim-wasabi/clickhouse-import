@@ -1,0 +1,1 @@
+"{\"DATE(EndTime)\": \"string\", \"TotalPaidActiveWithMinPiB\": \"float64\", \"TotalPaidActivePiB\": \"float64\", \"PaidStorageWithMinObjectSizePiB\": \"float64\", \"PaidRawStoragePiB\": \"float64\", \"PaidDeletedPiB\": \"float64\"}"

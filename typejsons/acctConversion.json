@@ -1,0 +1,1 @@
+"{\"AcctNum\": \"Int64\", \"AcctName\": \"str\", \"SignupSource\": \"str\", \"AccountCreatedAt\": \"str\", \"ConvertedOn\": \"str\", \"ConvertToPlan\": \"str\", \"DaysToConvert\": \"Int64\", \"ActiveStorageGB\": \"str\", \"Country\": \"str\", \"StateOrProvice\": \"str\", \"City\": \"str\", \"Address1\": \"str\", \"Address2\": \"str\"}"

@@ -1,0 +1,1 @@
+"{\"Region\": \"string\", \"NumUsers\": \"Int64\", \"NumBuckets\": \"Int64\", \"TotalBillableObjects\": \"Int64\", \"TotalDeletedObjects\": \"Int64\", \"TotalActiveStorageTB\": \"float64\", \"TotalDeletedStorageTB\": \"float64\"}"

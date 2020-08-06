@@ -1,0 +1,33 @@
+CREATE TABLE billing_reports.{}
+(
+    `ID` UInt64, 
+    `BucketUtilizationNum` UInt64, 
+    `AcctNum` UInt64, 
+    `AcctPlanNum` UInt64, 
+    `BucketNum` UInt64, 
+    `StartTime` DateTime, 
+    `EndTime` DateTime, 
+    `CreateTime` DateTime, 
+    `NumBillableObjects` UInt64, 
+    `NumBillableDeletedObjects` UInt64, 
+    `RawStorageSizeBytes` UInt64, 
+    `PaddedStorageSizeBytes` UInt64, 
+    `MetadataStorageSizeBytes` UInt64, 
+    `DeletedStorageSizeBytes` UInt64, 
+    `OrphanedStorageSizeBytes` UInt64, 
+    `NumAPICalls` UInt64, 
+    `UploadBytes` UInt64, 
+    `DownloadBytes` UInt64, 
+    `StorageWroteBytes` UInt64, 
+    `StorageReadBytes` UInt64, 
+    `TimeToCalc` Float64, 
+    `NumGETCalls` UInt64, 
+    `NumPUTCalls` UInt64, 
+    `NumDELETECalls` UInt64, 
+    `NumLISTCalls` UInt64, 
+    `NumHEADCalls` UInt64, 
+    `VaultName` LowCardinality(String), 
+    `DeleteBytes` UInt64
+)
+ENGINE = ReplacingMergeTree
+ORDER BY (BucketUtilizationNum, EndTime, AcctNum)

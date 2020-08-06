@@ -1,0 +1,11 @@
+CREATE TABLE billing_reports.{}
+(
+  `EndTime` DateTime,
+  `TotalPaidActiveWithMinPiB` Float64,
+  `TotalPaidActivePiB` Float64,
+  `PaidStorageWithMinObjectSizePiB` Float64,
+  `PaidRawStoragePiB` Float64,
+  `PaidDeletedPiB` Float64
+)
+ENGINE = ReplacingMergeTree
+ORDER BY EndTime

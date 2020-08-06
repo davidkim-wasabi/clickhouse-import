@@ -1,0 +1,12 @@
+CREATE TABLE billing_reports.{}
+(
+  `InvoiceNum` UInt64,
+  `Date` DateTime,
+  `AcctNum` UInt64,
+  `AcctName` String,
+  `Total` Decimal(15,2),
+  `AccountCumulativeToDate` Decimal(15,2),
+  `WasabiRevenueToDate` Decimal(15,2)
+)
+ENGINE = ReplacingMergeTree
+ORDER BY (Date, AcctNum)

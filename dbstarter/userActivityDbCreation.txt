@@ -1,0 +1,15 @@
+CREATE TABLE billing_reports.{}
+(
+  `StartTime` DateTime,
+  `EndTime` DateTime,
+  `AcctNum` UInt64,
+  `AcctName` String,
+  `CurrentBillingPlan` String,
+  `NumAPICalls` UInt64,
+  `UploadBytesGB` Float64,
+  `DownloadBytesGB` Float64,
+  `StorageWroteBytesGB` Float64,
+  `StorageReadBytesGB` Float64
+)
+ENGINE = ReplacingMergeTree
+ORDER BY EndTime

@@ -1,0 +1,20 @@
+CREATE TABLE billing_reports.{}
+(
+  `InvoiceNum` UInt64,
+  `InvoiceStatus` String,
+  `AcctNum` UInt64,
+  `AcctName` String,
+  `Date` DateTime,
+  `AccountDeleteTime` DateTime,
+  `BillingPlanName` String,
+  `Standing` String,
+  `PaymentDueOn` DateTime,
+  `DaysOverdue` UInt64,
+  `PaymentMethod` String,
+  `InvoicePeriodStart` DateTime,
+  `InvoicePeriodEnd` DateTime,
+  `Total` Decimal(15,2),
+  `LastPaymentFailureResponse` Nullable(String)
+)
+ENGINE = ReplacingMergeTree
+ORDER BY (AcctNum, Date)

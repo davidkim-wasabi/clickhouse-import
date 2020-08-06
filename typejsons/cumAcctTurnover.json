@@ -1,0 +1,1 @@
+"{\"AcctNum\": \"Int64\", \"AcctName\": \"string\", \"InviteSource\": \"string\", \"ConvertedOn\": \"string\", \"DeleteTime\": \"string\", \"NumDaysAsPayingCustomer\": \"Int64\", \"DeleteReason\": \"string\", \"LastActiveStorageUtilizationGB\": \"float64\", \"AmountInvoiced\": \"float64\", \"AmountCollected\": \"float64\"}"

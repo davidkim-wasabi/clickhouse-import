@@ -1,0 +1,10 @@
+CREATE TABLE billing_reports.{}
+(
+  `AcctName` String,
+  `AcctNum` UInt64,
+  `Date` DateTime,
+  `ActiveStorageChangedGB` Float64,
+  `DeleteStorageChangedGB` Float64
+)
+ENGINE = ReplacingMergeTree
+ORDER BY (AcctNum, Date)

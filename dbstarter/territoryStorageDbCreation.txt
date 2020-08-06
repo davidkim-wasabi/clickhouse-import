@@ -1,0 +1,9 @@
+CREATE TABLE billing_reports.{}
+(
+  `Territory` String,
+  `EndTime` DateTime,
+  `PaidActiveStoragePiB` Float64,
+  `PaidDeleteStoragePiB` Float64
+)
+ENGINE = ReplacingMergeTree
+ORDER BY (EndTime, Territory)

@@ -1,0 +1,13 @@
+# Junk
+.DS_Store
+*.json.swp
+
+# Large/unnecessary folders
+billing\ reports
+archive
+legacy\ reports
+__pycache__
+
+# Confidential
+gtoken.json
+clickhouse_secrets.py

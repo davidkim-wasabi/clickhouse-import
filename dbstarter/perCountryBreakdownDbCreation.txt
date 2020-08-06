@@ -1,0 +1,11 @@
+CREATE TABLE billing_reports.{}
+(
+  `Date` DateTime,
+  `Country` String,
+  `NumAccounts` UInt64,
+  `BillableStorageTB` Float64,
+  `AmountInvoiced` Decimal(15,2),
+  `AmountCollected` Decimal(15,2)
+)
+ENGINE = ReplacingMergeTree
+ORDER BY (Date, Country)

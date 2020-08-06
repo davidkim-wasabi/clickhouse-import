@@ -1,0 +1,1 @@
+"{\"AcctNum\": \"Int64\", \"AcctName\": \"string\", \"DeleteTime\": \"string\", \"DeleteReason\": \"string\", \"DaysToDelete\": \"Int64\"}"

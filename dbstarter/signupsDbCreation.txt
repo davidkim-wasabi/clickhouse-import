@@ -1,0 +1,11 @@
+CREATE TABLE billing_reports.{}
+(
+  `Email` String,
+  `InviteSource` String,
+  `BillingPlanName` String,
+  `CreateTime` DateTime,
+  `RedeemedAt` DateTime,
+  `ValidUntil` DateTime
+)
+ENGINE = ReplacingMergeTree
+ORDER BY CreateTime

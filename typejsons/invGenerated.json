@@ -1,0 +1,1 @@
+"{\"InvoiceNum\": \"Int64\", \"Date\": \"string\", \"AcctNum\": \"Int64\", \"AcctName\": \"string\", \"Total\": \"string\", \"AccountCumulativeToDate\": \"string\", \"WasabiRevenueToDate\": \"string\"}"

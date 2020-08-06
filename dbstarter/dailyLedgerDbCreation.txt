@@ -1,0 +1,25 @@
+CREATE TABLE billing_reports.{}
+(
+  `Date` DateTime,
+  `RecognizedRevenue` Decimal(18,5),
+  `RevActiveStorage` Decimal(18,5),
+  `Rev90DayDelStorage` Decimal(18,5),
+  `RevEgressCharge` Decimal(18,5),
+  `RevSubscriptionCharge` Decimal(18,5),
+  `RevOneTimeCharge` Decimal(18,5),
+  `AmountInvoicedIncSalesTax` Decimal(18,5),
+  `AmountInvoicedNoTax` Decimal(18,5),
+  `DiscountsAppplied` Decimal(18,5),
+  `AccountCreditRedemptions` Decimal(18,5),
+  `RedemptionAgainstPrepayment` Decimal(18,5),
+  `SmallPaymentWaivers` Decimal(18,5),
+  `MinimumSurchargeApplied` Decimal(18,5),
+  `AmountCollected` Decimal(18,5),
+  `StripeAmountCollected` Decimal(18,5),
+  `EstimatedPaymentProcessingFeesPaid` Decimal(18,5),
+  `SalesTaxCollected` Decimal(18,5),
+  `RefundsIssued` Decimal(18,5),
+  `AccountWriteOffs` Decimal(18,5)
+)
+ENGINE = ReplacingMergeTree
+ORDER BY Date

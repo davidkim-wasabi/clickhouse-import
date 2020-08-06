@@ -1,0 +1,9 @@
+CREATE TABLE billing_reports.{}
+(
+  `Date` DateTime,
+  `ConvertDateRange` LowCardinality(String),
+  `NumConversions` UInt64,
+  `PercentOfTotal` Float64
+)
+ENGINE = ReplacingMergeTree
+ORDER BY (Date, ConvertDateRange)

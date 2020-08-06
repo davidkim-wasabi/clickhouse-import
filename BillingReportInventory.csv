@@ -1,0 +1,40 @@
+﻿Report,Table Name,Date Column,Index Cols,Notes,Report Name,Ready?,Add Index Date,TimeRange Overlap,Remove File,Null String
+bucketUtils,bucket_utilization,"StartTime, EndTime, CreateTime","BucketUtilizationNum, EndTime",,BucketUtilization-,Yes,No,No,No,No
+acctConversions,account_conversions,"AccountCreatedAt, ConvertedOn","AcctNum, ConvertedOn",,account_conversions_1_day_,Yes,No,No,No,No
+invGenerated,invoices_generated,Date,"Date, AcctNum",,invoices_generated_1_day_,Yes,No,No,No,No
+expAccts,expiring_accounts,ExpiresAt,"ExpiresAt, AcctNum",,expiring_accounts_,Yes,No,No,No,No
+territoryStorage,territory_storage,EndTime,"EndTime, Territory",Has null index cols,per-territory-storage-current-stats_,Yes,No,No,No,Yes
+purgeAcct,purged_accounts,"DeleteTime, CreateTime",AcctNum,Doesn't need a date index since I assume accounts are only purged once,purged-trial-and-delinquent-accounts-1-day_,Yes,No,No,No,No
+signups,signups,"CreateTime, RedeemedAt, ValidUntil",RedeemedAt,,signups_1_day_,Yes,No,No,No,No
+dailyLedger,daily_ledger,Date,Date,Column names change,daily-ledger_,Yes,No,Yes,No,No
+dailyStorageIncrease,daily_storage_increase,,,No index date,daily-storage-increase_,Yes,Yes,No,No,No
+estimatedDelete,est_daily_deletes,"EndTime, StartTime",EndTime,Report timerange overlap - maybe only write the newest line?,estimated_daily_deleted_storage_,Yes,No,Yes,No,No
+euUserStats,eu_user_stats,,AcctNum,No index date,eu-central-1-user-stats_,Yes,Yes,No,No,No
+acctGain,account_net_gain,,AcctNum,No index date,net-gain-per-account_,Yes,Yes,No,No,No
+invOutstanding,outstanding_invoices,"AccountDeleteTime, PaymentDueOn, InvoicePeriodStart, InvoicePeriodEnd",AcctNum,No index date,outstanding-invoices_,Yes,Yes,No,No,No
+partnerKPI,partner_kpi,,PartnerID,Missing column CurrentActiveTiB,partner-kpi_,Yes,Yes,No,No,No
+dailyStorageHistory,daily_storage_history,EndTime,DATE(EndTime),Report timerange overlap - maybe only write the newest line?,per-day-storage-history_,Yes,No,Yes,No,No
+userActivity,userActivity,,,Redundant with user_current_stats,user_activity_1_day_,Yes,No,No,Yes,No
+vaultStorage,vault_storage,EndTime,"VaultName, EndTime",Report timerange overlap - maybe only write the newest line?,vault-storage-90-days_,Yes,No,Yes,No,No
+wasabiClientStats,wasabi_client_stats,,,No index date,wasabi-client-cumulative-stats_,Yes,Yes,No,No,No
+userStats,user_stats,"StorageStatsCurrentAsOf, AccountCreatedAt",,,user_current_stats_,Yes,No,No,No,No
+weeklyWebAcquisition,website_acquisition,"CohortStart, CohortEnd, AcquisitionWindowEndDate",CohortStart,,weekly_website_acquistion_funnel_,Yes,No,Yes,No,No
+weeklyClientAcquisition,client_acquisition,"CohortStart, CohortEnd, AcquisitionWindowEndDate",CohortStart,,weekly_client_acquistion_funnel_,Yes,No,Yes,No,No
+weeklyTotalAcquisition,total_acquisition,"CohortStart, CohortEnd, AcquisitionWindowEndDate",CohortStart,,weekly_acquistion_funnel_,Yes,No,Yes,No,No
+multiRegionKPI,multi_region_kpi,,"Date, Region",,multi-region-kpi_,Yes,Yes,No,No,No
+invoiceAmountDistribution,invoice_distribution,,Date,,invoice-amount-distribution_,Yes,Yes,No,No,No
+deletedAccounts,deleted_accounts,DeleteTime,DeleteTime,,deleted_account_7_day_,Yes,No,No,No,No
+daysToConvertDistribution,days_to_convert_distribution,,Date,,days-to-convert-distribution_,Yes,Yes,No,No,No
+30DayRevenue,monthly_revenue,,Date,,30-day-revenue-run-rate_,Yes,Yes,No,No,No
+storageDistribution,storage_distribution,,Date,,current-billable-storage-distribution_,Yes,Yes,No,No,No
+lifetimeDistribution,lifetime_distribution,,Date,,customer-lifetime-value-distribution_,Yes,Yes,No,No,No
+perCountryBreakdown,country_breakdown,,"Date, Country",,per-country-breakdown_,Yes,Yes,No,No,Yes
+cumAcctTurnover,account_turnover,"DeleteTime, ConvertedOn","AcctNum, DeleteTime",,cumulative-account-turnover_,Yes,No,No,No,Yes
+7-day user activity,,,,dup of daily,user_activity_7_day_,Yes,No,No,Yes,No
+7-day user Signups,,,,dup of daily,signups_7_day_,Yes,No,No,Yes,No
+7-day invoices,,,,dup of daily,invoices_generated_7_day_,Yes,No,No,Yes,No
+7-day conversions,,,,dup of daily,account_conversions_7_day_,Yes,No,No,Yes,No
+monthly conversions,,,,dup of daily,account_conversions_1_month_,Yes,No,No,Yes,No
+monthly invoices,,,,,invoices_generated_1_month_,Yes,No,No,Yes,No
+monthly signups,,,,,signups_1_month_,Yes,No,No,Yes,No
+monthly user activity,,,,,user_activity_1_month_,Yes,No,No,Yes,No

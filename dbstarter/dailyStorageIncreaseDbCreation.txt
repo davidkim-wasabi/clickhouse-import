@@ -1,0 +1,10 @@
+CREATE TABLE billing_reports.{}
+(
+  `Date` DateTime,
+  `Storage1DayUploadTB` Float64,
+  `PaidStorage1DayUploadTB` Float64,
+  `TotalBillableStorageTB` Float64,
+  `TotalPaidBillableStorageTB` Float64
+)
+ENGINE = ReplacingMergeTree
+ORDER BY Date

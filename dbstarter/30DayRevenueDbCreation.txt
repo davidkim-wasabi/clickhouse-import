@@ -1,0 +1,11 @@
+CREATE TABLE billing_reports.{}
+(
+  `Date` DateTime,
+  `Total` Decimal(15,2),
+  `ActiveStorage` Decimal(15,2),
+  `90DayDeletedStorage` Decimal(15,2),
+  `Egress` Decimal(15,2),
+  `SubscriptionCharge` Decimal(15,2)
+)
+ENGINE = ReplacingMergeTree
+ORDER BY Date

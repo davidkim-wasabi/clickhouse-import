@@ -1,0 +1,15 @@
+{
+  "AcctNum": "int64",
+  "AcctName": "str",
+  "SignupSource": "str",
+  "AccountCreatedAt": "str",
+  "ConvertedOn": "str",
+  "ConvertToPlan": "str",
+  "DaysToConvert": "float64",
+  "ActiveStorageGB": "float64",
+  "Country": "str",
+  "StateOrProvice": "str",
+  "City": "str",
+  "Address1": "str",
+  "Address2": "str"
+}

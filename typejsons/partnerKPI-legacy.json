@@ -1,0 +1,1 @@
+"{\"PartnerId\": \"string\", \"TotalSubAccounts\": \"Int64\", \"CurrentActiveSubAccounts\": \"Int64\", \"CurrentActiveTrialSubAccounts\": \"Int64\", \"CurrentActivePaidSubAccounts\": \"Int64\", \"TotalStorageGBDays\": \"float64\", \"TotalRecognizedStorageRevenue\": \"float64\"}"

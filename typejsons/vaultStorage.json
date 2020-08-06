@@ -1,0 +1,1 @@
+"{\"VaultName\": \"string\", \"EndTime\": \"string\", \"BillableRawStorageTiB\": \"float64\", \"BillablePaddedStorageSizeTiB\": \"float64\", \"BillableDeletedStorageSizeBytesTiB\": \"float64\"}"

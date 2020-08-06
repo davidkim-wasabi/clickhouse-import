@@ -1,0 +1,9 @@
+CREATE TABLE billing_reports.{}
+(
+  `Date` DateTime,
+  `CustomerLifetimeValueRange` LowCardinality(String),
+  `NumAccounts` UInt64,
+  `PercentOfTotal` Float64
+)
+ENGINE = ReplacingMergeTree
+ORDER BY (Date, CustomerLifetimeValueRange)

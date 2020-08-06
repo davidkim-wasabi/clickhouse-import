@@ -1,0 +1,10 @@
+CREATE TABLE billing_reports.{}
+(
+  `VaultName` String,
+  `EndTime` DateTime,
+  `BillableRawStorageTiB` Float64,
+  `BillablePaddedStorageSizeTiB` Float64,
+  `BillableDeletedStorageSizeBytesTiB` Float64
+)
+ENGINE = ReplacingMergeTree
+ORDER BY (VaultName, EndTime)

@@ -1,0 +1,8 @@
+CREATE TABLE billing_reports.{}
+(
+  `StartTime` DateTime,
+  `EndTime` DateTime,
+  `EstimatedDeletedTiB` Float64
+)
+ENGINE = ReplacingMergeTree
+ORDER BY EndTime

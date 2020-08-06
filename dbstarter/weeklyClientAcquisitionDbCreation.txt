@@ -1,0 +1,17 @@
+CREATE TABLE billing_reports.{}
+(
+  `WeeklyCohort` String,
+  `CohortStart` DateTime,
+  `CohortEnd` DateTime,
+  `AcquisitionWindowEndDate` DateTime,
+  `DaysAfterCohortStart` UInt64,
+  `PctTimeThroughWindow` Float64,
+  `InvitesCreated` UInt64,
+  `AccountsCreated` UInt64,
+  `PctInviteToAcctCreation` Decimal(15,2),
+  `AccountsConvertedToPaid` UInt64,
+  `PctTrialToPaidAccount` Decimal(15,2),
+  `PctInviteToPaidAccount` Decimal(15,2)
+)
+ENGINE = ReplacingMergeTree
+ORDER BY CohortStart

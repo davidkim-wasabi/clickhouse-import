@@ -1,0 +1,10 @@
+CREATE TABLE billing_reports.{}
+(
+  `AcctNum` UInt64,
+  `AcctName` String,
+  `DeleteTime` DateTime,
+  `DeleteReason` Nullable(String),
+  `DaysToDelete` UInt64
+)
+ENGINE = ReplacingMergeTree
+ORDER BY DeleteTime

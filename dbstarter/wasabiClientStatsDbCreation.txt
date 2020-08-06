@@ -1,0 +1,17 @@
+CREATE TABLE billing_reports.{}
+(
+  `Date` DateTime,
+  `CumulativeWasabiClientUsers` UInt64,
+  `CurrentWasabiClientUsers` UInt64,
+  `CumulativePayingWasabiClientUsers` UInt64,
+  `CurrentPayingWasabiClientUsers` UInt64,
+  `SignupsFromWasabiClient` UInt64,
+  `WasabiClientSignupsConversions` UInt64,
+  `NumObjectsInWCBuckets` UInt64,
+  `TotalActiveStorageInWCBucketsGB` Float64,
+  `PaidNumObjectsInWCBuckets` UInt64,
+  `PaidTotalBillableStorageInWCBucketsGB` Float64,
+  `StorageRevFromWCBuckets` Float64
+)
+ENGINE = ReplacingMergeTree
+ORDER BY Date

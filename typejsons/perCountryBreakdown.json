@@ -1,0 +1,1 @@
+"{\"Country\": \"string\", \"NumAccounts\": \"Int64\", \"BillableStorageTB\": \"float64\", \"AmountInvoiced\": \"float64\", \"AmountCollected\": \"float64\"}"

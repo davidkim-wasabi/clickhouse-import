@@ -1,0 +1,18 @@
+CREATE TABLE billing_reports.{}
+(
+  `AcctNum` UInt64,
+  `AcctName` String,
+  `SignupSource` Nullable(String),
+  `AccountCreatedAt` DateTime,
+  `ConvertedOn` DateTime,
+  `ConvertToPlan` String,
+  `DaysToConvert` Float64,
+  `ActiveStorageGB` Float64,
+  `Country` Nullable(String),
+  `StateOrProvice` Nullable(String),
+  `City` Nullable(String),
+  `Address1` Nullable(String),
+  `Address2` Nullable(String)
+)
+ENGINE = ReplacingMergeTree
+ORDER BY (AcctNum, ConvertedOn)

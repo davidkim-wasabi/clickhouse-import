@@ -1,0 +1,13 @@
+CREATE TABLE billing_reports.{}
+(
+  `Region` String,
+  `Date` DateTime,
+  `NumUsers` UInt64,
+  `NumBuckets` UInt64,
+  `TotalBillableObjects` UInt64,
+  `TotalDeletedObjects` UInt64,
+  `TotalActiveStorageTB` Float64,
+  `TotalDeletedStorageTB` Float64
+)
+ENGINE = ReplacingMergeTree
+ORDER BY (Region, Date)
