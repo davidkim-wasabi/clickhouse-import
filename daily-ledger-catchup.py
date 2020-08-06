@@ -1,3 +1,4 @@
+import clickhouse_secrets as chcreds
 from clickhouse_driver import Client
 import datetime as dt
 from progress.bar import IncrementalBar as Bar
@@ -122,7 +123,7 @@ def process_file(fname, report_data, srcdir = 'billing reports', destdir = 'arch
                     import_vals = data.to_dict('records')
 
                 #add reports to clickhouse
-                client = Client('localhost')
+                client = Client('localhost', user=chcreds.user, password=chcreds.password)
                 table_base = 'billing_reports.{}' if legacy else 'billing_reports.{}'
                 table_name = table_base.format(vals['Table Name'])
                 client.execute('INSERT INTO {t} ({v}) VALUES'.format(t = table_name, v=','.join(data.columns)), import_vals)
