@@ -15,7 +15,7 @@ for tbl in global_tables:
     os.system('cat {}.csv | \
         docker exec -i clickhouse-server clickhouse-client --user admin \
         --password 4irehose --query="INSERT INTO BA_Global.{} FORMAT CSV"'.format(
-          tbl_name, tbl_name))
+          os.path.join(base_path, "BA_Global", tbl_name), tbl_name))
 
 for tbl in billing_tables:
   if ".csv" in tbl:
@@ -23,4 +23,4 @@ for tbl in billing_tables:
     os.system('cat {}.csv | \
         docker exec -i clickhouse-server clickhouse-client --user admin \
         --password 4irehose --query="INSERT INTO BA_Billing.{} FORMAT CSV"'.format(
-        tbl_name, tbl_name))
+        os.path.join(base_path, "BA_Billing", tbl_name), tbl_name))
